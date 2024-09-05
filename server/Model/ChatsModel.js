@@ -12,6 +12,12 @@ const ChatSchema = mongoose.Schema({
     type: Number,
     default: Date.now(),
   },
+  sent: {
+    type: Boolean,
+  },
+  received: {
+    type: Boolean
+  }
 });
 const ChatModel = mongoose.model("chat", ChatSchema);
 module.exports = { ChatModel };
